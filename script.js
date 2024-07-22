@@ -5,7 +5,7 @@ let info = {
   july22B: [4, ".PNG", "july 22 - sunset clouds"],
 }
 let selected;
-let current = 999;
+let current;
 
 let Ecaption = document.getElementById("caption");
 let Enext = document.getElementById("next")
@@ -37,24 +37,33 @@ function cancel(){
 
 function next(){
   if(selected != null){
-    //if (current = null)
-      //current = info[selected][0]
+    if (current == null)
+      current = info[selected][0]
+    let oldImg = selected + "Img"
     
-    //let oldCurrent = current
     if(current >= info[selected][0])
       current = 1;
     else
       current++;
 
-      
-    /*
     let img = document.createElement('img')
+    img.classList.add("clickedNew");
     img.src = "./assets/" + selected + "/" + current + info[selected][1]
-    document.body.appendChild(img);
-    */
+    document.getElementById("galleryDiv").appendChild(img);
+    img.style.width = "100px";
+    document.getElementById(oldImg).style.opacity = 0
 
+    setTimeout(() => {
+      
+    }, 1000);
 
-    img = document.getElementById(selected + "Img")
-    img.src = "./assets/" + selected + "/" + current + info[selected][1]
+    
+    console.log(oldImg)
+    console.log(img)
+
+//element.remove()
+
+    //img = document.getElementById(selected + "Img")
+    //img.src = "./assets/" + selected + "/" + current + info[selected][1]
   }
 }
