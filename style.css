@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Single+Day&display=swap');
+body{
+  background-color: rgb(182, 172, 230);
+  font-family:"Single Day"
+}
+p {
+  z-index: 2;
+  font-size: 35px;
+  padding: 5px;
+text-align: center;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+button {
+  min-width: 250px;
+  width:25%;
+  margin: 0.25%;
+  border: 0;
+  background-color: transparent;
+}
+#galleryDiv img {
+  min-width: 250px;
+  width:25%;
+  margin: 0.25%;
+  border: 10px solid rgb(0, 0, 0, 0.05);
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+#galleryDiv img:hover, .clicked{
+  min-width: 310px;
+  width:28%;
+}
+
+#screen, #shown{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+#shown{
+  visibility: visible;
+  opacity: 0.65;
+}
+
+
+#galleryDiv {
+  position: relative;
+  overflow: auto;
+  white-space: nowrap;
+}
+.clicked {
+  position: relative;
+  left:35%;
+  z-index: 69;
+}
