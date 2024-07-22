@@ -22,6 +22,17 @@ function next(){
       current = 1;
     else
       current++;
-    document.getElementById(selected + "Img").src = "./assets/" + selected + "/" + current + ".JPG"
+    img = document.getElementById(selected + "Img")
+    img.src = "./assets/" + selected + "/" + current + ".JPG"
+    if (img.complete) 
+      console.log("yes")
+    else {
+      img.onload = () => {
+        console.log("yes")
+      }
+      img.onerror = () => {
+    img.src = "./assets/" + selected + "/" + current + ".PNG"
+      }
+    }
   }
 }
