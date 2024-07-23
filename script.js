@@ -3,6 +3,7 @@ let info = {
   july21: [4, ".JPG", "july 21 - powerline with sunset in background"],
   july22: [5, ".JPG", "july 22 - looking up at the sky"],
   july22B: [4, ".PNG", "july 22 - sunset clouds"],
+  july22C: [4, ".JPG", "july 22 - cityscape"],
 }
 let selected;
 let current;
